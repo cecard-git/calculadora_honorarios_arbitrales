@@ -60,6 +60,17 @@ function calcular() {
 
     mostrarResultados(datos);
 }
+function actualizarPlaceholder() {
+    let cuantia = document.getElementById("cuantia").value;
+    let campoMonto = document.getElementById("monto");
+
+
+    if (cuantia === "cuantiaD") {
+        campoMonto.placeholder = "Ingrese Monto de la Cuantía";
+      } else {
+        campoMonto.placeholder = "Ingrese Monto del Contrato Original";
+    }
+}
 
 function calcularGastosAdministrativos(monto) {
     if (monto <= 38000) return 2500;
