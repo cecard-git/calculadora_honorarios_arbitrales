@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(5, 7, 12, 0.50), rgba(5, 7, 12, 0.50)), url(calculadora_h.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 90%; 
+    text-align: center;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    padding: 10px 20px;
+}
+
+.container {
+    background:linear-gradient(rgba(248, 248, 248, 0.40), rgba(248, 248, 248, 0.40));
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+#contorno{
+    border: 3px solid #3498db
+    user-select
+    
+}
+
+.logo {
+    border-color: #003366;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 20px auto;
+    height: 100px;
+    width: auto;
+
+}
+
+.icono{
+    width: 50px;
+    padding-right:10px;
+    vertical-align: middle;
+
+}
+
+h2 {
+    margin: auto;
+    color: #f4f4f4;
+    text-shadow: 
+        -2px -2px 0 black, 
+        2px -2px 0 black, 
+        -2px  2px 0 black, 
+        2px  2px 0 black;
+    font-size: clamp(20px, 5vw, 24px);
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 50px;
+    color:#f6f7f8;
+}
+
+#cuantia {
+    align-items: center;
+    background-color: #7F1E57;
+    color: white;
+}
+
+select, input, button {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: clamp(14px, 4vw, 16px);
+}
+select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: clamp(14px, 4vw, 16px);
+}
+
+
+#iconoA{
+    display: inline-block;
+    background-color: #003366;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+#tooltipA{
+    position: absolute;
+    background-color: rgb(219, 213, 213);
+    color: #4637cc;
+    bottom: 38px;
+    left: 300px;
+    padding: 10px;
+    border-radius:20px;
+    font-size: 12px;
+
+}
+#tooltipContainerA{
+    position: relative;
+    display: inline;
+
+}
+
+
+#iconoB{
+    display: inline-block;
+    background-color: #003366;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+#tooltipB{
+    position: absolute;
+    background-color: rgb(219, 213, 213);
+    color: #4637cc;
+    bottom: 38px;
+    left: 300px;
+    padding: 10px;
+    border-radius:20px;
+    font-size: 12px;
+    
+
+}
+#tooltipContainerB{
+    position: relative;
+    display: inline;
+
+}
+.escondidoA{
+    display: none;
+}
+
+.escondidoB{
+    display: none;
+}
+
+
+button {
+    width: 120px;
+    background-color: #003366;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+
+
+table {
+    background-color: transparent;
+    width: 80%;
+    border-collapse: separate;
+    background: white;
+    border-radius: 5px;
+    overflow:hidden;
+    margin: 20px auto;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+th, td {
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid #c795ce;
+    text-align: center;
+    border-radius: 5px;
+    font-size: clamp(12px, 3vw, 14px);
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: #003366;
+    color: #f4f4f4;
+}
+
+.hidden {
+    display: none;
+     
+}
+
+.virtual {
+    position: fixed;
+    bottom: 30px; 
+    right: 10px;
+    width: 100px;
+    height: 60px;
+    z-index: 1000;
+    pointer-events: none;
+    
+
+    animation: float 0.7s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px orange);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+.volver{
+    color: #f4f4f4;
+    text-shadow: 
+    -2px -2px 0 black, 
+    2px -2px 0 black, 
+    -2px  2px 0 black, 
+    2px  2px 0 black;
+    text-align: center;
+    position: fixed;
+    bottom: 5px; 
+    right: 10px;
+    width: 100px;
+    padding: 5px 5px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: clamp(18px, 6vw, 22px); 
+    }
+
+    select, input, button {
+        padding: 8px;
+        font-size: clamp(12px, 4vw, 14px); 
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+   th, td {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 8px;
+        font-size: clamp(10px, 3vw, 12px); 
+    }
+    
+    table{
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 5%;      
+    }
+    
+    .virtual{
+        width: 50px;
+    }
+    .volver{
+        right:10px;
+        width: 60px;
+        font-size: 10px;
+    }
+    }
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: clamp(16px, 5vw, 20px);
+    }
+
+    select, input, button {
+        padding: 6px;
+        font-size: clamp(10px, 3.5vw, 12px);
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: clamp(8px, 2.5vw, 10px);
+    }
+}
+
+
+

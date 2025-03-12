@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Honorarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container">
+        <img src="logo_cecard.png" alt="Logo CECARD" class="logo">
+        <h2><img src="presupuesto.png" alt="" class="icono">Calculadora de Honorarios Arbitrales</h2> 
+        <h3>CECARD pone a disposición de sus usuarios la calculadora de tarifas para cuantías determinadas e <br> 
+            indeterminadas que podrán utilizar para conocer montos como los gastos administrativos y <br> honorarios profesionales de los árbitros.</h3> <br>
+        
+        <label for="cuantia">Tipo de cuantía</label><br>
+        <select id="cuantia">
+            <option value="">Seleccione</option>
+            <option value="cuantiaI">Cuantía indeterminada</option>
+            <option value="cuantiaD">Cuantía determinada</option>
+        </select>
+        <div id="contorno">
+            <div id="inputs" class="hidden">
+                <label for="monto">Monto (S/):</label><br>
+                <div id="tooltipContainerA">
+                    <input type="number" id="monto" placeholder="Ingrese el monto" onfocus="this.value=''">
+                    <span id="iconoA" >i</span>
+                    <p id="tooltipA" class="escondidoA">En caso de cuantías determinadas, ingrese el monto de la cuantía. 
+                        En caso de cuantías indeterminadas ingrese el monto del contrato original.</p>
+                </div>
+            </div>
+            <div id="pretensionesContainer" class="hidden">
+                <label for="pretensiones">Número de pretensiones:</label><br>
+                <div id="tooltipContainerB" >
+                    <input type="number" id="pretensiones" placeholder="Ingrese el número de pretensiones" onfocus="this.value=''">
+                    <span id="iconoB" >i</span>
+                    <p id="tooltipB" class="escondidoB">Consigne las Pretensiones Principales. 
+                        No se contabilizarán las pretensiones subordinadas, alternativas y 
+                        aquellas referidas a costas y costos.</p>
+                </div>  
+            </div>
+        </div>
+
+            <button id="calcularBtn">Calcular</button>
+
+            <table id="tablaResultadosContainer" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Resultado</th>
+                        <th>IGV</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaResultados"></tbody>
+            </table>
+    </div>
+    <script src="script.js" defer></script>
+    <img src="home_cecard.svg" alt="avirtual" class="virtual"><img src="" alt="">
+    <a class="volver" href="https://cecard.org/arbitraje/">Inicio</a>
+      
+</body>
+</html> 
