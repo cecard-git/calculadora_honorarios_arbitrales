@@ -52,9 +52,9 @@ function calcular() {
         ];
     } else if (tipoCuantia === "cuantiaI") {
         datos = [
-            { descripcion: "Gastos Administrativos", resultado: calcularGastosAdministrativos(monto*0.05* pretensiones)  },
-            { descripcion: "Honorarios Árbitro Único", resultado: calcularHonorariosArbitro(monto*0.05* pretensiones)  },
-            { descripcion: "Honorarios Tribunal Arbitral", resultado: calcularHonorariosTribunal(monto*0.05* pretensiones)  }
+            { descripcion: "Gastos Administrativos", resultado: calcularGastosAdministrativos(monto*0.05)*pretensiones },
+            { descripcion: "Honorarios Árbitro Único", resultado: calcularHonorariosArbitro(monto*0.05)* pretensiones  },
+            { descripcion: "Honorarios Tribunal Arbitral", resultado: calcularHonorariosTribunal(monto*0.05)*pretensiones  }
         ];
     }
 
